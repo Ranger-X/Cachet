@@ -1,4 +1,9 @@
 {
+<<<<<<< 74f7f25193f9af802ec9e5137130b64dcc2fb17f
   "dist/css/all.css": "dist/css/all-ac5658b2c7.css",
   "dist/js/all.js": "dist/js/all-8bc2535b92.js"
+=======
+  "dist/css/all.css": "dist/css/all-7e565cff72.css",
+  "dist/js/all.js": "dist/js/all-e35605aa24.js"
+>>>>>>> Improve the seeder to better show off updates
 }
