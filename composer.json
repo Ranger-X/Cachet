@@ -18,36 +18,42 @@
             "email": "joe@alt-three.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "https://github.com/GrahamCampbell/TwigBridge"
+        }
+    ],
     "require": {
         "php": ">=5.6.4",
-        "laravel/framework": "~5.2.31",
-        "alt-three/badger": "^3.0",
-        "alt-three/bus": "^1.0",
-        "alt-three/emoji": "^3.0",
-        "alt-three/validator": "^1.4",
-        "barryvdh/laravel-cors": "^0.8",
+        "laravel/framework": "~5.3.0",
+        "alt-three/badger": "^3.1",
+        "alt-three/bus": "^1.1",
+        "alt-three/emoji": "^3.1",
+        "alt-three/validator": "^1.5",
+        "barryvdh/laravel-cors": "^0.8.1",
         "doctrine/dbal": "^2.5",
         "fideloper/proxy": "^3.1",
-        "graham-campbell/binput": "^3.3",
-        "graham-campbell/core": "^4.2",
-        "graham-campbell/markdown": "^6.0",
-        "graham-campbell/exceptions": "^8.3",
+        "graham-campbell/binput": "^3.4",
+        "graham-campbell/core": "^4.3",
+        "graham-campbell/markdown": "^6.1",
+        "graham-campbell/exceptions": "^8.4",
         "guzzlehttp/guzzle": "^6.2",
-        "jenssegers/date": "^3.1",
-        "mccool/laravel-auto-presenter": "^4.2",
+        "jenssegers/date": "^3.2",
+        "mccool/laravel-auto-presenter": "^4.3",
         "pragmarx/google2fa": "^0.7.1",
-        "rcrowe/twigbridge": "^0.9.2",
+        "rcrowe/twigbridge": "dev-patch-1 as 0.9.3",
         "roumen/feed": "^2.10"
     },
     "require-dev": {
-        "alt-three/testbench": "^1.1",
+        "alt-three/testbench": "^1.4",
         "filp/whoops": "^2.0",
-        "fzaninotto/faker": "^1.5",
+        "fzaninotto/faker": "^1.6",
         "graham-campbell/testbench-core": "^1.1",
         "mockery/mockery": "^0.9.4",
         "phpunit/phpunit": "^5.2",
-        "symfony/css-selector": "^3.0",
-        "symfony/dom-crawler": "^3.0"
+        "symfony/css-selector": "^3.1",
+        "symfony/dom-crawler": "^3.1"
     },
     "autoload": {
         "classmap": [
