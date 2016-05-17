@@ -78,9 +78,11 @@ class Component extends Model implements HasPresenter
      * @var string[]
      */
     public $rules = [
-        'name'   => 'required|string',
-        'status' => 'int|required',
-        'link'   => 'url',
+        'name'           => 'required|string',
+        'status'         => 'int|required',
+        'link'           => 'url',
+        'acceptable_sla' => 'numeric',
+        'sla'            => 'numeric',
     ];
 
     /**

@@ -64,6 +64,10 @@
                             </label>
                         </div>
                         <div class="form-group">
+                            <label>{{ trans('forms.components.acceptable_sla') }}</label>
+                            <input type="number" name="component[acceptable_sla]" class="form-control" step="any">
+                        </div>
+                        <div class="form-group">
                             <label>{{ trans('forms.components.sla') }}</label>
                             <input type="text" name="component[sla]" class="form-control">
                         </div>
