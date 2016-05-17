@@ -65,7 +65,7 @@
                         </div>
                         <div class="form-group">
                             <label>{{ trans('forms.components.acceptable_sla') }}</label>
-                            <input type="number" name="component[acceptable_sla]" class="form-control" step="any">
+                            <input type="number" name="component[acceptable_sla]" class="form-control" step="any" value="{{ $component->acceptable_sla }}">
                         </div>
                         <div class="checkbox">
                             <label>
