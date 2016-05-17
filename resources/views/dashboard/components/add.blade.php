@@ -63,6 +63,17 @@
                                 {{ trans('forms.components.enabled') }}
                             </label>
                         </div>
+                        <div class="form-group">
+                            <label>{{ trans('forms.components.acceptable_sla') }}</label>
+                            <input type="text" name="component[acceptable_sla]" class="form-control">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="hidden" value="0" name="component[show_sla]">
+                                <input type="checkbox" value="0" name="component[show_sla]">
+                                {{ trans('forms.components.show_sla') }}
+                            </label>
+                        </div>
                     </fieldset>
 
                     <input type="hidden" name="component[order]" value="0">

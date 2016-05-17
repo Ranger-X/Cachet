@@ -5,6 +5,10 @@
     {{ $component->name }}
     @endif
 
+    @if($component->show_sla)
+        SLA: {{ $component->sla }} / {{ $component->accepted_sla }}
+    @endif
+
     @if($component->description)
     <i class="ion ion-ios-help-outline help-icon" data-toggle="tooltip" data-title="{{ $component->description }}" data-container="body"></i>
     @endif

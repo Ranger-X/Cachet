@@ -30,11 +30,12 @@ class Component extends Model implements HasPresenter
      * @var mixed[]
      */
     protected $attributes = [
-        'order'       => 0,
-        'group_id'    => 0,
-        'description' => '',
-        'link'        => '',
-        'enabled'     => true,
+        'order'          => 0,
+        'group_id'       => 0,
+        'description'    => '',
+        'link'           => '',
+        'enabled'        => true,
+        'acceptable_sla' => 99.9900,
     ];
 
     /**
@@ -49,6 +50,7 @@ class Component extends Model implements HasPresenter
         'link'        => 'string',
         'deleted_at'  => 'date',
         'enabled'     => 'bool',
+        'show_sla'    => 'bool',
     ];
 
     /**
@@ -65,6 +67,9 @@ class Component extends Model implements HasPresenter
         'order',
         'group_id',
         'enabled',
+        'sla',
+        'acceptable_sla',
+        'show_sla',
     ];
 
     /**
@@ -90,6 +95,7 @@ class Component extends Model implements HasPresenter
         'order',
         'group_id',
         'enabled',
+        'show_sla',
     ];
 
     /**
@@ -104,6 +110,7 @@ class Component extends Model implements HasPresenter
         'order',
         'group_id',
         'enabled',
+        'show_sla',
     ];
 
     /**

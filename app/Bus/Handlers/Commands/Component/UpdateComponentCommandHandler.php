@@ -45,13 +45,16 @@ class UpdateComponentCommandHandler
     protected function filter(UpdateComponentCommand $command)
     {
         $params = [
-            'name'        => $command->name,
-            'description' => $command->description,
-            'link'        => $command->link,
-            'status'      => $command->status,
-            'enabled'     => $command->enabled,
-            'order'       => $command->order,
-            'group_id'    => $command->group_id,
+            'name'           => $command->name,
+            'description'    => $command->description,
+            'link'           => $command->link,
+            'status'         => $command->status,
+            'enabled'        => $command->enabled,
+            'order'          => $command->order,
+            'group_id'       => $command->group_id,
+            'acceptable_sla' => $command->acceptable_sla,
+            'sla'            => $command->sla,
+            'show_sla'       => $command->show_sla,
         ];
 
         return array_filter($params, function ($val) {

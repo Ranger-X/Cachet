@@ -135,7 +135,10 @@ class ComponentController extends Controller
                 $componentData['link'],
                 $componentData['order'],
                 $componentData['group_id'],
-                $componentData['enabled']
+                $componentData['enabled'],
+                $componentData['acceptable_sla'],
+                $componentData['sla'],
+                $componentData['show_sla']
             ));
         } catch (ValidationException $e) {
             return Redirect::route('dashboard.components.edit', ['id' => $component->id])
@@ -188,7 +191,9 @@ class ComponentController extends Controller
                 $componentData['link'],
                 $componentData['order'],
                 $componentData['group_id'],
-                $componentData['enabled']
+                $componentData['enabled'],
+                $componentData['acceptable_sla'],
+                $componentData['show_sla']
             ));
         } catch (ValidationException $e) {
             return Redirect::route('dashboard.components.add')

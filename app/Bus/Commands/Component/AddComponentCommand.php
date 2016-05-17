@@ -63,6 +63,20 @@ final class AddComponentCommand
     public $enabled;
 
     /**
+     * Acceptable SLA percent
+     *
+     * @var float
+     */
+    public $acceptable_sla;
+
+    /**
+     * Is the SLA showing on statuspage?
+     *
+     * @var bool
+     */
+    public $show_sla;
+
+    /**
      * The validation rules.
      *
      * @var string[]
@@ -75,6 +89,7 @@ final class AddComponentCommand
         'order'       => 'int',
         'group_id'    => 'int',
         'enabled'     => 'bool',
+        'show_sla'    => 'bool',
     ];
 
     /**
@@ -87,10 +102,12 @@ final class AddComponentCommand
      * @param int    $order
      * @param int    $group_id
      * @param bool   $enabled
+     * @param float  $acceptable_sla
+     * @param bool   $show_sla
      *
      * @return void
      */
-    public function __construct($name, $description, $status, $link, $order, $group_id, $enabled)
+    public function __construct($name, $description, $status, $link, $order, $group_id, $enabled, $acceptable_sla, $show_sla)
     {
         $this->name = $name;
         $this->description = $description;
@@ -99,5 +116,7 @@ final class AddComponentCommand
         $this->order = $order;
         $this->group_id = $group_id;
         $this->enabled = $enabled;
+        $this->acceptable_sla = $acceptable_sla;
+        $this->show_sla = $show_sla;
     }
 }

@@ -63,6 +63,17 @@
                                 {{ trans('forms.components.enabled') }}
                             </label>
                         </div>
+                        <div class="form-group">
+                            <label>{{ trans('forms.components.sla') }}</label>
+                            <input type="text" name="component[sla]" class="form-control">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="hidden" value="0" name="component[show_sla]">
+                                <input type="checkbox" value="1" name="component[show_sla]" {{ $component->show_sla ? "checked" : null }}>
+                                {{ trans('forms.components.show_sla') }}
+                            </label>
+                        </div>
                     </fieldset>
 
                     <input type="hidden" name="component[user_id]" value="{{ $component->agent_id || $current_user->id }}">
