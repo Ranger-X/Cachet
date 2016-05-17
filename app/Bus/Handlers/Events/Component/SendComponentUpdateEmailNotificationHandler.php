@@ -94,8 +94,8 @@ class SendComponentUpdateEmailNotificationHandler
     {
         $mail = [
             'subject'                => trans('cachet.subscriber.email.component.subject'),
-            'component_name'         => $component->name,
-            'component_human_status' => $component->human_status,
+            'component_name'         => $event->component->name,
+            'component_human_status' => $event->component->human_status,
         ];
 
         $mail['email'] = $subscriber->email;

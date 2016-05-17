@@ -69,7 +69,7 @@
                         </div>
                         <div class="form-group">
                             <label>{{ trans('forms.components.sla') }}</label>
-                            <input type="text" name="component[sla]" class="form-control">
+                            <input type="number" name="component[sla]" class="form-control" step="any">
                         </div>
                         <div class="checkbox">
                             <label>
