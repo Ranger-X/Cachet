@@ -15,14 +15,13 @@
             $green_sect_perc = $component->sla / $component->acceptable_sla * 100;
             if ($green_sect_perc < 0) $green_sect_perc = 0; if ($green_sect_perc > 100) $green_sect_perc = 100;
     ?>
-    <div class="progress">
+    <div class="progress" data-toggle="tooltip" data-title="Current SLA: {{ $component->sla }}<br/>Acceptable SLA: {{ $component->acceptable_sla }}" data-container="body">
         <div class="progress-bar progress-bar-success progress-bar-striped" style="width: {{ $green_sect_perc }}%">
         </div>
         <div class="progress-bar progress-bar-danger progress-bar-striped" style="width: {{ (100 - $green_sect_perc) }}%">
-            {{ number_format(($component->acceptable_sla -  $component->sla), 4, '.', '') }}
+            {{ number_format(($component->acceptable_sla - $component->sla), 4, '.', '') }}
         </div>
     </div>
-    SLA: {{ $component->sla }} / {{ $component->acceptable_sla }}
     @endif
 
     <div class="pull-right">
