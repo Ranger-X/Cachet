@@ -9,6 +9,21 @@
         <div class="pull-right">
             <i class="ion ion-ios-circle-filled text-component-{{ $componentGroup->lowest_status }} {{ $componentGroup->lowest_status_color }}" data-toggle="tooltip" title="{{ $componentGroup->lowest_human_status }}"></i>
         </div>
+
+        @if($componentGroup->show_sla && $componentGroup->acceptable_sla > 0)
+            {{-- calculating values for progress bar display --}}
+            <?php
+            $green_sect_perc = $componentGroup->sla / $componentGroup->acceptable_sla * 100;
+            if ($green_sect_perc < 0) $green_sect_perc = 0; if ($green_sect_perc > 100) $green_sect_perc = 100;
+            ?>
+            <div class="progress" data-html="true" data-toggle="tooltip" data-title="Current SLA: <b>{{ $componentGroup->sla }}</b><br/>Acceptable SLA: <b>{{ $componentGroup->acceptable_sla }}</b>" data-container="body">
+                <div class="progress-bar progress-bar-success progress-bar-striped" style="width: {{ $green_sect_perc }}%">
+                    {{ number_format($componentGroup->sla, 4, '.', '') }}
+                </div>
+                <div class="progress-bar progress-bar-danger progress-bar-striped" style="width: {{ (100 - $green_sect_perc) }}%">
+                </div>
+            </div>
+        @endif
     </li>
 
     <div class="group-items {{ $componentGroup->is_collapsed ? "hide" : null }}">
