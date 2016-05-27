@@ -29,6 +29,21 @@
                                 <option value="2" {{ $group->collapsed === 2 ? "selected" : null }}>{{ trans('forms.components.groups.collapsed_incident') }}</option>
                             </select>
                         </div>
+                        <div class="form-group">
+                            <label>{{ trans('forms.components.groups.acceptable_sla') }}</label>
+                            <input type="number" name="acceptable_sla" class="form-control" step="any" value="{{ $group->acceptable_sla }}">
+                        </div>
+                        <div class="form-group">
+                            <label>{{ trans('forms.components.groups.sla') }}</label>
+                            <input type="number" name="sla" class="form-control" step="any" value="{{ $group->sla }}">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="hidden" value="0" name="show_sla">
+                                <input type="checkbox" value="1" name="show_sla" {{ $group->show_sla ? "checked" : null }}>
+                                {{ trans('forms.components.groups.show_sla') }}
+                            </label>
+                        </div>
                     </fieldset>
 
                     <div class="btn-group">

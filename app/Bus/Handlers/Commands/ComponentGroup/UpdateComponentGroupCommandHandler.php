@@ -43,9 +43,12 @@ class UpdateComponentGroupCommandHandler
     protected function filter(UpdateComponentGroupCommand $command)
     {
         $params = [
-            'name'      => $command->name,
-            'order'     => $command->order,
-            'collapsed' => $command->collapsed,
+            'name'           => $command->name,
+            'order'          => $command->order,
+            'collapsed'      => $command->collapsed,
+            'acceptable_sla' => $command->acceptable_sla,
+            'sla'            => $command->sla,
+            'show_sla'       => $command->show_sla,
         ];
 
         return array_filter($params, function ($val) {

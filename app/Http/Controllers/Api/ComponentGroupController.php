@@ -74,7 +74,9 @@ class ComponentGroupController extends AbstractApiController
             $group = dispatch(new AddComponentGroupCommand(
                 Binput::get('name'),
                 Binput::get('order', 0),
-                Binput::get('collapsed', 0)
+                Binput::get('collapsed', 0),
+                Binput::get('acceptable_sla'),
+                (bool) Binput::get('show_sla', false)
             ));
         } catch (QueryException $e) {
             throw new BadRequestHttpException();
@@ -97,7 +99,10 @@ class ComponentGroupController extends AbstractApiController
                 $group,
                 Binput::get('name'),
                 Binput::get('order'),
-                Binput::get('collapsed')
+                Binput::get('collapsed'),
+                Binput::get('acceptable_sla'),
+                Binput::get('sla'),
+                (bool) Binput::get('show_sla', false)
             ));
         } catch (QueryException $e) {
             throw new BadRequestHttpException();

@@ -77,6 +77,9 @@ return [
             'visible'            => 'Always expanded',
             'collapsed'          => 'Collapse the group by default',
             'collapsed_incident' => 'Collapse the group, but expand if there are issues',
+            'acceptable_sla'     => 'Acceptable SLA percent',
+            'sla'                => 'Current SLA percent',
+            'show_sla'           => 'Show SLA percent?',
         ],
     ],
 

@@ -28,8 +28,9 @@ class ComponentGroup extends Model implements HasPresenter
      * @var string
      */
     protected $attributes = [
-        'order'     => 0,
-        'collapsed' => 0,
+        'order'          => 0,
+        'collapsed'      => 0,
+        'acceptable_sla' => 99.9900,
     ];
 
     /**
@@ -41,6 +42,7 @@ class ComponentGroup extends Model implements HasPresenter
         'name'      => 'string',
         'order'     => 'int',
         'collapsed' => 'int',
+        'show_sla'  => 'bool',
     ];
 
     /**
@@ -48,7 +50,7 @@ class ComponentGroup extends Model implements HasPresenter
      *
      * @var string[]
      */
-    protected $fillable = ['name', 'order', 'collapsed'];
+    protected $fillable = ['name', 'order', 'collapsed', 'sla', 'acceptable_sla', 'show_sla'];
 
     /**
      * The validation rules.
@@ -59,6 +61,8 @@ class ComponentGroup extends Model implements HasPresenter
         'name'      => 'required|string',
         'order'     => 'int',
         'collapsed' => 'int',
+        'acceptable_sla' => 'numeric',
+        'sla'            => 'numeric',
     ];
 
     /**
@@ -71,6 +75,7 @@ class ComponentGroup extends Model implements HasPresenter
         'name',
         'order',
         'collapsed',
+        'show_sla',
     ];
 
     /**
@@ -83,6 +88,7 @@ class ComponentGroup extends Model implements HasPresenter
         'name',
         'order',
         'collapsed',
+        'show_sla',
     ];
 
     /**

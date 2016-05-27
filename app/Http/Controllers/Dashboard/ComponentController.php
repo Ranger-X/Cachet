@@ -282,7 +282,9 @@ class ComponentController extends Controller
             $group = dispatch(new AddComponentGroupCommand(
                 Binput::get('name'),
                 Binput::get('order', 0),
-                Binput::get('collapsed')
+                Binput::get('collapsed'),
+                Binput::get('acceptable_sla'),
+                (bool)Binput::get('show_sla')
             ));
         } catch (ValidationException $e) {
             return Redirect::route('dashboard.components.groups.add')
@@ -309,7 +311,10 @@ class ComponentController extends Controller
                 $group,
                 Binput::get('name'),
                 $group->order,
-                Binput::get('collapsed')
+                Binput::get('collapsed'),
+                Binput::get('acceptable_sla'),
+                Binput::get('sla'),
+                (bool)Binput::get('show_sla')
             ));
         } catch (ValidationException $e) {
             return Redirect::route('dashboard.components.groups.edit', ['id' => $group->id])
